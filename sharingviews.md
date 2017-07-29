@@ -2,7 +2,6 @@
 
 There are two single URL based controls, **Goto** and **ShowImage** that enable the sharing of views by simply providing recipients with the URL. **Goto** is the simpler of the two, and enables a link to a particular point in space (RA, Dec and Zoom) to be captured, and then sent, for example, by email. **ShowImage** is similar, but includes more information (including a link to an image) that enables the sharing of that single image, without the need to write a WTML data file or create a community. If a valid data file does exist, a command line parameter can be used to initiate the Windows Client version.
 
-
 ### Goto
 
 To capture a link from WorldWide Telescope, right click to bring up the **Finder Scope**, select **Research** then **Copy Shortcut** from the menu. This will encode the current view into a URL.
