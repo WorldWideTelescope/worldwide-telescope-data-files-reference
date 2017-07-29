@@ -1,4 +1,5 @@
 # Summary
+
 *   [Collections Files](collections.md)
   *   [Structure of a Collection File](collections.md#structure-of-a-collection-file)
   *   [Places](collections.md#places)
