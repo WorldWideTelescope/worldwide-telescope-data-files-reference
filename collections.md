@@ -329,7 +329,7 @@ All but two of the parameters in a **Tour** entry are optional, and are identifi
 | ```     LengthInSecs=”243”``` | The approximate length of the tour in seconds. This entry is only used in the tour properties dialog, as information for users. |
 | ```     RelatedTours="26BB4C2E-52F1-4fdf-8C99-31556E791FC6;26BB4C2E-52F1-4fdf-8C99-31556E791FC7"``` | List of related tours identified by their ID entry. This feature is currently only implemented for the default tours. |
 | ```   </Folder>``` | |
-| ```</Folder>``` | []() |
+| ```</Folder>``` | |
 
 The following example shows the minimal meaningful information necessary to add a **Tour** entry.
 
