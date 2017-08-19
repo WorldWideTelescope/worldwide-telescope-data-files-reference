@@ -16,10 +16,10 @@ Following this there are four required parameters, separated by the ampersand (&
 
 | Required Parameter | Description |
 | :-- | :-- |
-| ```object=_string_``` | Name to appear on the thumbnail, under **Collections > Open Collections > Link Collection**. |
-| ```ra=_double_``` | Right ascension (RA) of the view center. |
-| ```dec=_double_``` | Declination (Dec) of the view center. |
-| ```zoom=_double_``` | Zoom factor (6 x Field of View). |
+| ```object=string``` | Name to appear on the thumbnail, under **Collections > Open Collections > Link Collection**. |
+| ```ra=double``` | Right ascension (RA) of the view center. |
+| ```dec=double``` | Declination (Dec) of the view center. |
+| ```zoom=double``` | Zoom factor (6 x Field of View). |
 
 
 | Optional Parameter | Description |
@@ -55,24 +55,24 @@ Add to this base the following parameters, with an ampersand (&) between each pa
 
 | Required Parameter | Description |
 | :-- | :-- |
-| ```name=_string_``` | User friendly, but relatively unique name.
-| ```ra=_double_``` | Right ascension (RA) of the image center (or tangent point) from the plate solution. |
-| ```x=_double_``` | Pixel position corresponding to the RA. |
-| ```dec=_double_``` | Declination (Dec) of the image center (or tangent point) from the plate solution. |
-| ```y=_double_``` | Pixel position corresponding to the Dec. |
-| ```scale=_double_``` | Arc seconds per pixel from the plate solution. |
-| ```rotation=_double_``` | Rotation east of north. |
-| ```imageurl=_string_``` | URL encoded link to the original image at the scale and size of the image described in the rest of the URL. |
+| ```name=string``` | User friendly, but relatively unique name.
+| ```ra=double``` | Right ascension (RA) of the image center (or tangent point) from the plate solution. |
+| ```x=double``` | Pixel position corresponding to the RA. |
+| ```dec=double``` | Declination (Dec) of the image center (or tangent point) from the plate solution. |
+| ```y=double``` | Pixel position corresponding to the Dec. |
+| ```scale=double``` | Arc seconds per pixel from the plate solution. |
+| ```rotation=double``` | Rotation east of north. |
+| ```imageurl=string``` | URL encoded link to the original image at the scale and size of the image described in the rest of the URL. |
 
 | Optional Parameter | Description |
 | :-- | :-- |
 | ```wtml=true``` | The default behavior is that this will open the image in the Windows Client version of WorldWide Telescope, rather than the Web Client version. This assumes that the mime-type for WTML files is set to the Windows Client.
-| ```thumb=_string_``` | Link to the thumbnail image. The thumbnail should be 96x45 pixels. |
-| ```credits=_string_``` | Appropriate credit text. |
-| ```creditsUrl=_string_``` | Link to the credit information or image page. |
-| ```reverseparity=_Bool_``` | True inverts the image, False is the default. |
-| ```goto=_Bool_``` | True indicates that WorldWide Telescope will slew and zoom on the image only. False (the default) indicates that the image thumbnail will appear under **Open Collections** and the user must select this to slew and zoom to the image. False also indicates that the user can save the image to their own collections. |
-| ```debug=_Bool_``` | True indicates that the WTML file will be shown, rather than launched. False is the default. |
+| ```thumb=string``` | Link to the thumbnail image. The thumbnail should be 96x45 pixels. |
+| ```credits=string``` | Appropriate credit text. |
+| ```creditsUrl=string``` | Link to the credit information or image page. |
+| ```reverseparity=Bool``` | True inverts the image, False is the default. |
+| ```goto=Bool``` | True indicates that WorldWide Telescope will slew and zoom on the image only. False (the default) indicates that the image thumbnail will appear under **Open Collections** and the user must select this to slew and zoom to the image. False also indicates that the user can save the image to their own collections. |
+| ```debug=Bool``` | True indicates that the WTML file will be shown, rather than launched. False is the default. |
 
 #### Examples
 
@@ -109,9 +109,9 @@ To initiate the Windows Client version of WorldWide Telescope, with either a WTM
     ```
 3.  Type a command such as:
     ```
-    wwtexplorer _path\datafile_.wtml
+    wwtexplorer path\datafile.wtml
     or
-    wwtexplorer _path\tourfile_.wtt
+    wwtexplorer path\tourfile.wtt
     ```
     ensuring of course that the full path and filenames are correct.
-4.  This should open up WorldWide Telescope with either the collection thumbnail from a wtml file displayed under **Collections > Open Collections**, or will startup a tour if a valid tour file is used as the command line parameter.## 
+4.  This should open up WorldWide Telescope with either the collection thumbnail from a wtml file displayed under **Collections > Open Collections**, or will startup a tour if a valid tour file is used as the command line parameter.##
