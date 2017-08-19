@@ -97,14 +97,14 @@ The following shows an example of a **Place** entry in **Sky** mode (a view of t
 | ```Classification="Star"``` | One of a range of [Classifications](appendices.md#classifications).|
 | ```Magnitude="-0.72"``` | The _Apparent Magnitude_ of the star. This field does not affect the view, but is simply information that is displayed in the Properties for the place. |
 | ```Distance="19604298.227"``` | The distance to the star in astronomical units (AU). Multiply light years by 63239.6717 to get the distance in AU. This field does not affect the view, but is simply information that is displayed in the Properties for the place. |
-| ```</Place>``` | ![]() |
+| ```</Place>``` |  |
 
 The following shows an example of a **Place** entry in **Planet** mode (the location of Olympus Mons on Mars).
 
 
 | XML | Description |
 | :-- | :-- |
-| ```<Place``` | ![]() |
+| ```<Place``` |  |
 | ```Name = "Olympus Mons"``` | The name of the feature. |
 | ```Thumbnail = "http://...../Images/T_mountain.jpg"``` | A URL to a thumbnail image for use in the top panel. |
 | ```DataSetType = "Planet"``` | Set this to Planet in order to use latitude and longitude. |
@@ -112,19 +112,19 @@ The following shows an example of a **Place** entry in **Planet** mode (the loca
 | ```Lng = "133.0"``` | The longitude of the feature, in the range -360 to 360 degrees. |
 | ```ZoomLevel = "60.0"``` | The Zoom Level when viewing the feature. Zoom Level is six times the Field of View, so a Zoom Level of 60 will give a Field of View of 10. |
 | ```Angle = "45">``` | The angle for the view. Zero, the default, will give a view vertically down to the planet surface. An angle of 45 degrees will angle the view up by 45 degrees. |
-| ```</Place>``` | ![]() |
+| ```</Place>``` |  |
 
 
 The following shows an example of a **Place** entry containing a link (to a high definition image of a gully on Mars):
 
 | XML | Description |
 | :-- | :-- |
-| ```<Place``` | ![]() |
+| ```<Place``` |  |
 | ```Url="http://hirise.lpl.arizona.edu/PSP_005957_1435"``` | Link to the web page.  This could be to an html web page, or to a document such as ```.pdf``` file. |
 | ```Thumbnail="http://...../Images/T_mars.jpg"``` | Link to the thumbnail image. |
 | ```DataSetType = "Planet"``` | This entry is optional, but should be present if the default of **Sky** is not correct for the data. If the user double-clicks the place thumbnail, then the mode will change to that set in this field before the web page is displayed. This mode change does not happen if the user single-clicks the thumbnail. |
 | ```Name = "Gully on Mars">``` | Descriptive name of the web page. |
-| ```</Place>``` | ![]() |
+| ```</Place>``` |  |
 
 #### Thumbnail Images
 
@@ -220,10 +220,10 @@ The following table describes how the Galaxy NGC 4579 image might be entered int
 | ```<Credits>"NASA, ESA, and M. Livio (STScI) /Line2/Line3 Data were taken 2009." </Credits>``` | Brief description of where the image came from, who made it, the date it was taken, and so on. Add "/" characters to show that the credits should appear on different lines. |
 | ```<CreditsUrl>"path.html"</CreditsUrl>``` | URL to a site that might give more information on the image. |
 | ```<ThumbnailUrl>"path.jpg" </ThumbnailUrl>``` | A link to an image (96 wide x 45 in height) for use as a thumbnail. |
-| ```             </ImageSet>``` | ![]() |
-| ```</ForegroundImageSet>``` | ![]() |
-| ```</Place>``` | ![]() |
-| ```   </Folder>``` | ![]() |
+| ```             </ImageSet>``` |  |
+| ```</ForegroundImageSet>``` |  |
+| ```</Place>``` |  |
+| ```   </Folder>``` |  |
 
 The following images give examples of how the appearance of an image can be changed by varying some of the parameters.
 
