@@ -114,4 +114,4 @@ To initiate the Windows Client version of WorldWide Telescope, with either a WTM
     wwtexplorer path\tourfile.wtt
     ```
     ensuring of course that the full path and filenames are correct.
-4.  This should open up WorldWide Telescope with either the collection thumbnail from a wtml file displayed under **Collections > Open Collections**, or will startup a tour if a valid tour file is used as the command line parameter.##
+4.  This should open up WorldWide Telescope with either the collection thumbnail from a wtml file displayed under **Collections > Open Collections**, or will startup a tour if a valid tour file is used as the command line parameter.

@@ -80,7 +80,7 @@ Note that the **Name** entries appear in the upper panel of WorldWide Telescope,
 
 ### Places
 
-A place is simply a location for the view. **Place** entries are used within [Studies](#Studies) to contain imagery, but can be present in a collection file as viewing points without any additional images. **Place** entries can also be used to hold links to web pages (articles, supporting documents, community website, and so on).
+A place is simply a location for the view. **Place** entries are used within [Studies](#studies) to contain imagery, but can be present in a collection file as viewing points without any additional images. **Place** entries can also be used to hold links to web pages (articles, supporting documents, community website, and so on).
 
 The following shows an example of a **Place** entry in **Sky** mode (a view of the southern star Canopus).
 
@@ -93,8 +93,8 @@ The following shows an example of a **Place** entry in **Sky** mode (a view of t
 | ```RA = "6.3991667"``` | Right ascension of the star, in decimal hours. |
 | ```Dec = "-52.6952778"``` | Declination of the star, in decimal degrees. |
 | ```ZoomLevel = "60.0"``` | The Zoom Level when viewing the feature. Zoom Level is six times the Field of View, so a Zoom Level of 60 will give a Field of View of 10. |
-| ```Constellation = "CAR"``` | Determines the constellation to be shown in the Properties panel. Set to the three or four letter code specified in the [Constellations](#constellations) table, CAR for Carina in this case. |
-| ```Classification="Star"``` | One of a range of [Classifications](#classifications).|
+| ```Constellation = "CAR"``` | Determines the constellation to be shown in the Properties panel. Set to the three or four letter code specified in the [Constellations](appendices.md#constellations) table, CAR for Carina in this case. |
+| ```Classification="Star"``` | One of a range of [Classifications](appendices.md#classifications).|
 | ```Magnitude="-0.72"``` | The _Apparent Magnitude_ of the star. This field does not affect the view, but is simply information that is displayed in the Properties for the place. |
 | ```Distance="19604298.227"``` | The distance to the star in astronomical units (AU). Multiply light years by 63239.6717 to get the distance in AU. This field does not affect the view, but is simply information that is displayed in the Properties for the place. |
 | ```</Place>``` | ![]() |
@@ -186,8 +186,8 @@ The following table describes how the Galaxy NGC 4579 image might be entered int
 | ```DataSetType="Sky"``` |  One of: **Sky**, **Planet**, **Earth**, **Panorama**, **Survey** |
 | ```RA="3.1885833 "``` | Right ascension, in decimal hours, of the center of the viewpoint for the study. To be the center of the image divide the RA of the image (**CenterX**) in the **ImageSet** tag (which is in degrees) by 15.0\. |
 | ```Dec="1.31471944444444 "``` | Declination, in degrees, of the viewpoint for the study. This value often equals **CenterY** from the **ImageSet**. |
-| ```Constellation="CET"``` | Determines the constellation to be shown in the Study Properties panel. Set to the three or four letter code specified in the [Constellations](#Constellations) table. |
-| ```Classification="Galaxy"``` | One of a range of [Classifications](#Classifications). |
+| ```Constellation="CET"``` | Determines the constellation to be shown in the Study Properties panel. Set to the three or four letter code specified in the [Constellations](appendices.md#constellations) table. |
+| ```Classification="Galaxy"``` | One of a range of [Classifications](appendices.md#classifications). |
 | ```Magnitude="0"``` | This field does not affect the view, but is simply information about the original picture that can be displayed in the Properties for the image. |
 | ```Distance="0"``` | This field does not affect the view, but is simply information about the original picture that can be displayed in the Properties for the image. |
 | ```ZoomLevel="0.2"``` | Distance away from the image of the view. Note **ZoomLevel** and **Field of View** refer to the same thing. The higher the zoom level the greater distance the viewpoint is away from the image. Maximum field of view is 60 degrees, the minimum is just below 0.00023. |
@@ -361,11 +361,11 @@ You can set up your own community using your own servers and without any contact
 
 To set up a community go through the following steps:
 
-*   [Step 1: Set the Mime Types](#Step1SettheMimeTypes)
-*   [Step 2: Create a Thumbnail Image](#Step2CreateaThumnailImage)
-*   [Step 3: Create a Payload File](#Step3CreateaPayloadFile)
-*   [Step 4: Create a Signup File](#Step4CreateaSignupFile)
-*   [Step 5: Accessing the Community](#Step5AccessingtheCommunity)
+*   [Step 1: Set the Mime Types](#step-1-set-the-mime-types)
+*   [Step 2: Create a Thumbnail Image](#step-2-create-a-thumnail-image)
+*   [Step 3: Create a Payload File](#step-3-create-a-payload-file)
+*   [Step 4: Create a Signup File](#step-4-create-a-signup-file)
+*   [Step 5: Accessing the Community](#step-5-accessing-the-community)
 
 ### Step 1: Set the Mime Types
 
