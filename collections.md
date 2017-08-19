@@ -362,7 +362,7 @@ You can set up your own community using your own servers and without any contact
 To set up a community go through the following steps:
 
 *   [Step 1: Set the Mime Types](#step-1-set-the-mime-types)
-*   [Step 2: Create a Thumbnail Image](#step-2-create-a-thumnail-image)
+*   [Step 2: Create a Thumbnail Image](#step-2-create-a-thumbnail-image)
 *   [Step 3: Create a Payload File](#step-3-create-a-payload-file)
 *   [Step 4: Create a Signup File](#step-4-create-a-signup-file)
 *   [Step 5: Accessing the Community](#step-5-accessing-the-community)
@@ -402,7 +402,7 @@ Typically payload files contain the following:
 *   Links to articles or the organization’s website
 *   Links to Blog entries, forums, conversation threads, discussion boards
 
-A sample community payload file is [Community Payload.html](#wtml-community-payload).
+A sample community payload file is [Community Payload.html](Wtml/Sample_CommunityPayload.html).
 
 ### Step 4: Create a Signup File
 
@@ -418,7 +418,7 @@ A signup file is a short WTML file that points to the thumbnail and payload file
 | ```    Thumbnail= "http://research.microsoft.com/..../wwtdatacommunitylogo.jpg"``` | Full URL of the community thumbnail. |
 | ```    Url= "http://research.microsoft.com/..../wwtdata_payload.wtml"/>``` | Full URL of the payload file. |
 
-A sample community signup file is also listed at [Join Our Community.html](#wtml-join-our-community).
+A sample community signup file is also listed at [Join Our Community.html](Wtml/Sample_Signup.html).
 
 ### Step 5: Accessing the Community
 
