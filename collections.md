@@ -146,7 +146,7 @@ The process of dividing up an image into this pyramid of tiles can be done using
 
 For example, suppose we had a 1457 x 1201 study image, such as this Spitzer image of Galaxy NGC 4579.
 
-![](images/spitzer1.jpg)
+![](images/Spitzer1.jpg)
 This image should be embedded in a 2048 x 2048 image and stored in a pyramid with four levels 0, 1, 2, 3\.
 
 At level 3 there would be 64 256 x 256 tiles containing the entire image (no image is shown here for this level).
@@ -154,19 +154,19 @@ The location is about Right Ascension 47.83 degrees (3h 11m 19s) and Declination
 
 #### Level 2
 
-![](images/spitzer2.jpg)
+![](images/Spitzer2.jpg)
 
 At level 2 there are 16 256x256 tiles representing a down-sampled 1024 x 1024 version of the image. The grey shadows show the transparent regions. Some of the tiles have been labeled with X and Y coordinates between 0 and 3 -- which is how individual tiles of the pyramid are addressed at each level.
 
 #### Level 1
 
-![](images/spitzer3.jpg)
+![](images/Spitzer3.jpg)
 
 At level 1 there are 4 256x256 tiles representing a further down-sampled 512 x 512 version of the image.
 
 #### Level 0
 
-![](images/spitzer4.jpg)
+![](images/Spitzer4.jpg)
 
 At level 0 there is a single down-sampled 256x256 version of the image.
 
