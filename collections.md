@@ -508,7 +508,7 @@ Typically payload files contain the following:
 * Links to Blog entries, forums, conversation threads, discussion boards
 
 A sample community payload file is
-[Community Payload.html](wtml/Sample_CommunityPayload.html).
+[sample-community-payload.wtml](wtml/sample-community-payload.wtml).
 
 ### Step 4: Create a Signup File
 
@@ -566,4 +566,4 @@ the sample code.
 | [WTML Sample Tour Collection](wtml/sample_tourcollection.html) | Shows a collection of two tours. |
 | [WTML Sample Panorama Survey](wtml/sample_panoramasurvey.html) | Shows a collection containing a single panorama. |
 | [WTML Join Our Community](wtml/Sample_Signup.html) | Shows a community signup file. |
-| [WTML Community Payload](wtml/Sample_CommunityPayload.html) | Shows a community payload file that can be used as a starting point for a new community. The community includes tours, studies, downloads and links. |
+| [Sample Community Payload](wtml/sample-community-payload.wtml) | Shows a community payload file that can be used as a starting point for a new community. The community includes tours, studies, downloads and links. |
