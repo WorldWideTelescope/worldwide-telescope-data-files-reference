@@ -1,14 +1,32 @@
 ## Collections Files
 
-A collection is a friendly name given to a WTML file. WTML is the user-editable file format designed specifically for WorldWide Telescope. The **Explore** menu entry that WorldWide Telescope users will be very familiar with, is essentially a WTML browser.
+A collection is a friendly name given to a WTML file. WTML is the
+user-editable file format designed specifically for WorldWide Telescope. The
+**Explore** menu entry that WorldWide Telescope users will be very familiar
+with, is essentially a WTML browser.
 
-Fairly simple examples of WTML files are those that contain only one type of object entry, for example a list of tours, or a list of studies. Potentially one of the most complex is a community payload file, which will often contain a hierarchy of folders, each folder containing a collection of sub-folders and objects. Objects can be tours, studies, panoramas, planets, all-sky surveys, and links. Examples of the most common types of WTML file are listed in the samples section.
+Fairly simple examples of WTML files are those that contain only one type of
+object entry, for example a list of tours, or a list of studies. Potentially
+one of the most complex is a community payload file, which will often contain
+a hierarchy of folders, each folder containing a collection of sub-folders and
+objects. Objects can be tours, studies, panoramas, planets, all-sky surveys,
+and links. Examples of the most common types of WTML file are listed in the
+samples section.
 
 ### Structure of a Collection File
 
-A collection file is coded in xml, and is a hierarchical collection of **Folder** entries. The following example can be loaded into WorldWide Telescope and will appear as the image below, even though all the folders are empty. The example is based on a community payload file, though a very similar structure would apply to a hierarchical selection of tours or studies.
+A collection file is coded in xml, and is a hierarchical collection of
+**Folder** entries. The following example can be loaded into WorldWide
+Telescope and will appear as the image below, even though all the folders are
+empty. The example is based on a community payload file, though a very similar
+structure would apply to a hierarchical selection of tours or studies.
 
-Note that the **Name** entries appear in the upper panel of WorldWide Telescope, and that one unique thumbnail image for each **Folder** is helpful (though not required, a default thumbnail will be used if none is provided), and more thumbnail images will be helpful for each entry within each **Folder**. A substantial number of thumbnail images can be necessary if the collection file is large.
+Note that the **Name** entries appear in the upper panel of WorldWide
+Telescope, and that one unique thumbnail image for each **Folder** is helpful
+(though not required, a default thumbnail will be used if none is provided),
+and more thumbnail images will be helpful for each entry within each
+**Folder**. A substantial number of thumbnail images can be necessary if the
+collection file is large.
 
 ![](images/BlankCollection.png)
 
@@ -80,9 +98,14 @@ Note that the **Name** entries appear in the upper panel of WorldWide Telescope,
 
 ### Places
 
-A place is simply a location for the view. **Place** entries are used within [Studies](#studies) to contain imagery, but can be present in a collection file as viewing points without any additional images. **Place** entries can also be used to hold links to web pages (articles, supporting documents, community website, and so on).
+A place is simply a location for the view. **Place** entries are used within
+[Studies](#studies) to contain imagery, but can be present in a collection
+file as viewing points without any additional images. **Place** entries can
+also be used to hold links to web pages (articles, supporting documents,
+community website, and so on).
 
-The following shows an example of a **Place** entry in **Sky** mode (a view of the southern star Canopus).
+The following shows an example of a **Place** entry in **Sky** mode (a view of
+the southern star Canopus).
 
 | XML | Description |
 | :-- | :-- |
@@ -99,7 +122,8 @@ The following shows an example of a **Place** entry in **Sky** mode (a view of t
 | ```Distance="19604298.227"``` | The distance to the star in astronomical units (AU). Multiply light years by 63239.6717 to get the distance in AU. This field does not affect the view, but is simply information that is displayed in the Properties for the place. |
 | ```</Place>``` |  |
 
-The following shows an example of a **Place** entry in **Planet** mode (the location of Olympus Mons on Mars).
+The following shows an example of a **Place** entry in **Planet** mode (the
+location of Olympus Mons on Mars).
 
 
 | XML | Description |
@@ -115,7 +139,8 @@ The following shows an example of a **Place** entry in **Planet** mode (the loca
 | ```</Place>``` |  |
 
 
-The following shows an example of a **Place** entry containing a link (to a high definition image of a gully on Mars):
+The following shows an example of a **Place** entry containing a link (to a
+high definition image of a gully on Mars):
 
 | XML | Description |
 | :-- | :-- |
@@ -128,41 +153,71 @@ The following shows an example of a **Place** entry containing a link (to a high
 
 #### Thumbnail Images
 
-Thumbnail images are used frequently throughout WorldWide Telescope to provide an image to go along with a link, either in the top pane under Collections or Tours, or in the lower pane as part of a context search. Typically if you prepare your own data you may well create a thumbnail image for it - usually be taking a screen shot then capturing a rectangle of interest to match the fixed sizes of the thumbnails given in this document. Note that URL entries for thumbnails should always reference the full path, and not a relative path.
+Thumbnail images are used frequently throughout WorldWide Telescope to provide
+an image to go along with a link, either in the top pane under Collections or
+Tours, or in the lower pane as part of a context search. Typically if you
+prepare your own data you may well create a thumbnail image for it - usually
+be taking a screen shot then capturing a rectangle of interest to match the
+fixed sizes of the thumbnails given in this document. Note that URL entries
+for thumbnails should always reference the full path, and not a relative path.
 
-An alternative is to request a thumbnail image from the thumbnail server. This is done by entering appropriate text at the end of the following query (the example requests a thumbnail where the title contains the word "Mars"):
+An alternative is to request a thumbnail image from the thumbnail server. This
+is done by entering appropriate text at the end of the following query (the
+example requests a thumbnail where the title contains the word "Mars"):
 
 ```html
 http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=Mars
 ```
 
-If a thumbnail image is not found containing the supplied text, as suitable default is used.
+If a thumbnail image is not found containing the supplied text, as suitable
+default is used.
 
 ### Studies
 
-Study images are stored in image pyramids. Given an W x H pixel study, it is represented as an N x N pixel image where N is the smallest power of 2 that is at least as big as W and H. In mathematical terms, N = 2^ceiling(log_2(max(W,H))). In simpler terms, if a study image is 958 by 768 pixels, it will be embedded in a 1024 x 1024 square bitmap. The extra area not covered by the W x H photograph is occupied by transparent pixels. This forms the lowest level of the pyramid, with each level up containing a lower-resolution version of the original image with half the height and half the width of the image at the previous level. At each level, the image is further divided up into 256 x 256 tiles.
+Study images are stored in image pyramids. Given an W x H pixel study, it is
+represented as an N x N pixel image where N is the smallest power of 2 that is
+at least as big as W and H. In mathematical terms, N =
+2^ceiling(log_2(max(W,H))). In simpler terms, if a study image is 958 by 768
+pixels, it will be embedded in a 1024 x 1024 square bitmap. The extra area not
+covered by the W x H photograph is occupied by transparent pixels. This forms
+the lowest level of the pyramid, with each level up containing a
+lower-resolution version of the original image with half the height and half
+the width of the image at the previous level. At each level, the image is
+further divided up into 256 x 256 tiles.
 
-The process of dividing up an image into this pyramid of tiles can be done using the Study Chopper tool. This tool not only creates the correct tiles, but places them in the required directory structure, and outputs sample WTML files to load them into WorldWide Telescope. The Study Chopper tool is included with the [WorldWide Telescope May 2009 ADK](http://research.microsoft.com/en-us/collaboration/wwt-ap/resources.aspx).
+The process of dividing up an image into this pyramid of tiles can be done
+using the Study Chopper tool. This tool not only creates the correct tiles,
+but places them in the required directory structure, and outputs sample WTML
+files to load them into WorldWide Telescope. The Study Chopper tool is
+included with the
+[WorldWide Telescope May 2009 ADK](http://research.microsoft.com/en-us/collaboration/wwt-ap/resources.aspx).
 
-For example, suppose we had a 1457 x 1201 study image, such as this Spitzer image of Galaxy NGC 4579.
+For example, suppose we had a 1457 x 1201 study image, such as this Spitzer
+image of Galaxy NGC 4579.
 
 ![](images/Spitzer1.jpg)
 This image should be embedded in a 2048 x 2048 image and stored in a pyramid with four levels 0, 1, 2, 3\.
 
-At level 3 there would be 64 256 x 256 tiles containing the entire image (no image is shown here for this level).
-The location is about Right Ascension 47.83 degrees (3h 11m 19s) and Declination 1.32 degrees (1d 18m 53s) in J2000 coordinates, and it is about 20 arc seconds wide.
+At level 3 there would be 64 256 x 256 tiles containing the entire image (no
+image is shown here for this level). The location is about Right Ascension
+47.83 degrees (3h 11m 19s) and Declination 1.32 degrees (1d 18m 53s) in J2000
+coordinates, and it is about 20 arc seconds wide.
 
 #### Level 2
 
 ![](images/Spitzer2.jpg)
 
-At level 2 there are 16 256x256 tiles representing a down-sampled 1024 x 1024 version of the image. The grey shadows show the transparent regions. Some of the tiles have been labeled with X and Y coordinates between 0 and 3 -- which is how individual tiles of the pyramid are addressed at each level.
+At level 2 there are 16 256x256 tiles representing a down-sampled 1024 x 1024
+version of the image. The grey shadows show the transparent regions. Some of
+the tiles have been labeled with X and Y coordinates between 0 and 3 -- which
+is how individual tiles of the pyramid are addressed at each level.
 
 #### Level 1
 
 ![](images/Spitzer3.jpg)
 
-At level 1 there are 4 256x256 tiles representing a further down-sampled 512 x 512 version of the image.
+At level 1 there are 4 256x256 tiles representing a further down-sampled 512 x
+512 version of the image.
 
 #### Level 0
 
@@ -170,7 +225,9 @@ At level 1 there are 4 256x256 tiles representing a further down-sampled 512 x 5
 
 At level 0 there is a single down-sampled 256x256 version of the image.
 
-The following table describes how the Galaxy NGC 4579 image might be entered into a date file. The **Place** entry should be considered the position of the view, and the **ImageSet** entry the position of the image itself.
+The following table describes how the Galaxy NGC 4579 image might be entered
+into a date file. The **Place** entry should be considered the position of the
+view, and the **ImageSet** entry the position of the image itself.
 
 
 | XML | Description |
@@ -225,25 +282,34 @@ The following table describes how the Galaxy NGC 4579 image might be entered int
 | ```</Place>``` |  |
 | ```   </Folder>``` |  |
 
-The following images give examples of how the appearance of an image can be changed by varying some of the parameters.
+The following images give examples of how the appearance of an image can be
+changed by varying some of the parameters.
 
 
 ##### Image Manipulation
 
-The following text shows the starting point, with the resulting image shown below.
+The following text shows the starting point, with the resulting image shown
+below.
 
 ![Fomalhaut](images/PlaceFomalhaut.png)
 ![basic image](images/NoChange.jpg)
 
-Changing the **Rotation** entry of the **ImageSet** to 45 will result in a 45 degree left rotation. If the **Rotation** was set at -45, the rotation would be to the right.
+Changing the **Rotation** entry of the **ImageSet** to 45 will result in a 45
+degree left rotation. If the **Rotation** was set at -45, the rotation would
+be to the right.
+
 ![Rotation 45](images/Rotation45.jpg)
 
 
-Leaving the **ImageSet** **Rotation** at zero, and changing the **Place** **Rotation** to -45 degrees, results in the following image. Note the apparent variation in the angle of the image, as the view is not perfectly aligned with the center of the image.
+Leaving the **ImageSet** **Rotation** at zero, and changing the **Place**
+**Rotation** to -45 degrees, results in the following image. Note the apparent
+variation in the angle of the image, as the view is not perfectly aligned with
+the center of the image.
 
 ![](images/PlaceRotation45.jpg)
 
-Leaving both rotation values at zero, and doubling the **ZoomLevel** to 0.246666:
+Leaving both rotation values at zero, and doubling the **ZoomLevel** to
+0.246666:
 
 
 ![](images/ZoomLevel0p2466.jpg)
@@ -256,26 +322,42 @@ Changing the **Opacity** setting for the view to 25 (percent):
 
 ![](images/PlaceOpactity25.jpg)
 
-Applying an offset to the image (**OffsetX** = 0.001, **OffsetY** == 0.002), results in a slight displacement of the image up and to the right.
+Applying an offset to the image (**OffsetX** = 0.001, **OffsetY** == 0.002),
+results in a slight displacement of the image up and to the right.
 
 ![](images/ImageOffsetpp1pp2.jpg)
 
 
 ### Surveys
 
-Surveys typically contain image data for the entire sky. The most popular surveys are inevitably at the visual wavelengths, however there are many other options at non-visible wavelengths -- such as radio, x-ray, gamma, and so on. Comparing the visual appearance of an object with a graphical representation of one of the non-visible wavelengths is an important feature of WorldWide Telescope.
+Surveys typically contain image data for the entire sky. The most popular
+surveys are inevitably at the visual wavelengths, however there are many other
+options at non-visible wavelengths -- such as radio, x-ray, gamma, and so on.
+Comparing the visual appearance of an object with a graphical representation
+of one of the non-visible wavelengths is an important feature of WorldWide
+Telescope.
 
 This section describes the WTML file format used to contain survey data.
 
 #### Survey Data
 
-Preparing a full sky survey involves a huge amount of data collection and preparation, and a comparatively simple WTML collection file to render it. The Toast projection system for survey data is described in the [WorldWide Telescope Projection Reference](WorldWideTelescopeProjectionReference.html), and the Sphere Toaster tool used to prepare data is described in the [WorldWide Telescope Data Tools Guide](WorldWideTelescopeDataToolsGuide.html).
+Preparing a full sky survey involves a huge amount of data collection and
+preparation, and a comparatively simple WTML collection file to render it. The
+Toast projection system for survey data is described in the
+[WorldWide Telescope Projection Reference](WorldWideTelescopeProjectionReference.html),
+and the Sphere Toaster tool used to prepare data is described in the
+[WorldWide Telescope Data Tools Guide](WorldWideTelescopeDataToolsGuide.html).
 
-Similar to studies, the source image data is converted into an image pyramid for ease of rendering.
+Similar to studies, the source image data is converted into an image pyramid
+for ease of rendering.
 
-The WTML collection file used to render a survey is simpler than that for a study, as no positional data is needed. The orientation of the survey is determined using the Sphere Toaster tool.
+The WTML collection file used to render a survey is simpler than that for a
+study, as no positional data is needed. The orientation of the survey is
+determined using the Sphere Toaster tool.
 
-There  are few differences between the contents of a WTML file containing a study or a survey. In particular note that the **Projection** entry is set to **Toast** rather than **Tangent.**
+There  are few differences between the contents of a WTML file containing a
+study or a survey. In particular note that the **Projection** entry is set to
+**Toast** rather than **Tangent.**
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
@@ -303,9 +385,16 @@ There  are few differences between the contents of a WTML file containing a stu
 
 ### Tours
 
-The actual content of a tour is stored in a .WTT file. These files include a lot of binary information and are not designed to be human-readable. However, WTML files can contain references to tours. These references can be used in conjunction with a set of images, so that an appropriate tour or range of tours is available for the new image data (the references to the new images are embedded in the WTT file). Alternatively of course tour collections can be put together for existing image data.
+The actual content of a tour is stored in a .WTT file. These files include a
+lot of binary information and are not designed to be human-readable. However,
+WTML files can contain references to tours. These references can be used in
+conjunction with a set of images, so that an appropriate tour or range of
+tours is available for the new image data (the references to the new images
+are embedded in the WTT file). Alternatively of course tour collections can be
+put together for existing image data.
 
-All but two of the parameters in a **Tour** entry are optional, and are identified in the table.
+All but two of the parameters in a **Tour** entry are optional, and are
+identified in the table.
 
 
 | XML | Description |
@@ -331,14 +420,16 @@ All but two of the parameters in a **Tour** entry are optional, and are identifi
 | ```   </Folder>``` | |
 | ```</Folder>``` | |
 
-The following example shows the minimal meaningful information necessary to add a **Tour** entry.
+The following example shows the minimal meaningful information necessary to
+add a **Tour** entry.
 
 
 ![](images/MinimalTour.png)
 
 #### Default Tours
 
-The default tours used by the Windows version of WorldWide Telescope are held in the _tours.WTML_ file, in the following locations:
+The default tours used by the Windows version of WorldWide Telescope are held
+in the _tours.WTML_ file, in the following locations:
 
 Windows Vista: **C:\Users\<userid>\AppData\Local\Microsoft\WorldWideTelescope\data\**
 
@@ -349,15 +440,32 @@ Currently there is not a supported process to add your own tours to this file.
 
 ### Communities
 
-Communities are the primary way in which WorldWide Telescope users can share data and tours with each other. Communities can be made by any user, but typically are individuals or organizations, such as planetariums, science centers, astronomy clubs, magazines, bloggers, schools, classes, and for class projects. There is no limit to the number of communities that can be set up.
+Communities are the primary way in which WorldWide Telescope users can share
+data and tours with each other. Communities can be made by any user, but
+typically are individuals or organizations, such as planetariums, science
+centers, astronomy clubs, magazines, bloggers, schools, classes, and for class
+projects. There is no limit to the number of communities that can be set up.
 
 ### Setting up a Community
 
-You can set up your own community using your own servers and without any contact with Microsoft. However, you may prefer to have your community listed it on the WorldWide Telescope Community Directory (a subset of which is shown on the [WWT Support page](http://www.worldwidetelescope.org/help/SupportHelp.aspx)). To do this, send an email to **WWTCommunity@microsoft.com**, requesting that your community be listed. To be considered for inclusion in the community directory, community sites must maintain standards in terms of quality, scalability, and content appropriateness. These standards include:
+You can set up your own community using your own servers and without any
+contact with Microsoft. However, you may prefer to have your community listed
+it on the WorldWide Telescope Community Directory (a subset of which is shown
+on the
+[WWT Support page](http://www.worldwidetelescope.org/help/SupportHelp.aspx)).
+To do this, send an email to **WWTCommunity@microsoft.com**, requesting that
+your community be listed. To be considered for inclusion in the community
+directory, community sites must maintain standards in terms of quality,
+scalability, and content appropriateness. These standards include:
 
-*   Sign-up membership can be required by your community, but community access must remain free for all users.
-*   Community content must be well moderated, free of hate speech, and reflect currently accepted astronomical information/theory. The installation must have sufficient capacity for handling projected traffic.
-*   The community must make use of integrated WorldWide Telescope features such as tours, sky-aligned images, and so on. Not just simple HTML links to existing web content.
+*   Sign-up membership can be required by your community, but community access
+    must remain free for all users.
+*   Community content must be well moderated, free of hate speech, and reflect
+    currently accepted astronomical information/theory. The installation must
+    have sufficient capacity for handling projected traffic.
+*   The community must make use of integrated WorldWide Telescope features
+    such as tours, sky-aligned images, and so on. Not just simple HTML links
+    to existing web content.
 
 To set up a community go through the following steps:
 
@@ -369,7 +477,8 @@ To set up a community go through the following steps:
 
 ### Step 1: Set the Mime Types
 
-To set up a community, you should first add the WorldWide Telescope file extensions to the mime types on your server.
+To set up a community, you should first add the WorldWide Telescope file
+extensions to the mime types on your server.
 
 
 | File type | File extension | Mime-Type |
@@ -380,7 +489,8 @@ To set up a community, you should first add the WorldWide Telescope file extensi
 
 ### Step 2: Create a Thumbnail Image
 
-Create a thumbnail image for the community. This should be 176 wide by 45 pixels in height.
+Create a thumbnail image for the community. This should be 176 wide by 45
+pixels in height.
 
 ![](images/CommunityThumbnail.png)
 Sample community thumbnail.
@@ -388,7 +498,11 @@ Sample community thumbnail.
 
 ### Step 3: Create a Payload File
 
-The payload file contains the main content for a community. This file determines the folder structure, images, tours, community metadata, and so on. In its simplest form, a payload file can be a static WTML file that is hand-edited on the server side. Alternatively it can be generated from a database, and so might be much easier to update regularly.
+The payload file contains the main content for a community. This file
+determines the folder structure, images, tours, community metadata, and so on.
+In its simplest form, a payload file can be a static WTML file that is
+hand-edited on the server side. Alternatively it can be generated from a
+database, and so might be much easier to update regularly.
 
 Typically payload files contain the following:
 
@@ -402,11 +516,14 @@ Typically payload files contain the following:
 *   Links to articles or the organization’s website
 *   Links to Blog entries, forums, conversation threads, discussion boards
 
-A sample community payload file is [Community Payload.html](Wtml/Sample_CommunityPayload.html).
+A sample community payload file is
+[Community Payload.html](Wtml/Sample_CommunityPayload.html).
 
 ### Step 4: Create a Signup File
 
-A signup file is a short WTML file that points to the thumbnail and payload files, and gives the title of the community. The following table shows a sample signup file, based on the signup file for the WWT Data Community.
+A signup file is a short WTML file that points to the thumbnail and payload
+files, and gives the title of the community. The following table shows a
+sample signup file, based on the signup file for the WWT Data Community.
 
 
 | XML | Description |
@@ -418,15 +535,20 @@ A signup file is a short WTML file that points to the thumbnail and payload file
 | ```    Thumbnail= "http://research.microsoft.com/..../wwtdatacommunitylogo.jpg"``` | Full URL of the community thumbnail. |
 | ```    Url= "http://research.microsoft.com/..../wwtdata_payload.wtml"/>``` | Full URL of the payload file. |
 
-A sample community signup file is also listed at [Join Our Community.html](Wtml/Sample_Signup.html).
+A sample community signup file is also listed at
+[Join Our Community.html](Wtml/Sample_Signup.html).
 
 ### Step 5: Accessing the Community
 
-The signup file should be placed in a web-accessible location, and appropriately linked to from your institution/organization/club website.
+The signup file should be placed in a web-accessible location, and
+appropriately linked to from your institution/organization/club website.
 
 ### Including Other WTML Files
 
-A WTML file can include references to other WTML files, which can then be used to build up collections of collections, or add studies and surveys to a community payload file, for example. To include another WTML file in a collection, add the following entry:
+A WTML file can include references to other WTML files, which can then be used
+to build up collections of collections, or add studies and surveys to a
+community payload file, for example. To include another WTML file in a
+collection, add the following entry:
 
 | XML | Description |
 | :-- | :-- |
@@ -440,9 +562,12 @@ A WTML file can include references to other WTML files, which can then be used t
 
 ## WTML Samples
 
-The following table lists the samples that can be used as a starting point for WorldWide Telescope WTML file development.
+The following table lists the samples that can be used as a starting point for
+WorldWide Telescope WTML file development.
 
-Click on the **Sample Name** to view the source. Note that paths may need to be changed for the samples to work, these paths are highlighted by comments in the sample code.
+Click on the **Sample Name** to view the source. Note that paths may need to
+be changed for the samples to work, these paths are highlighted by comments in
+the sample code.
 
 
 | Sample Name | Description |

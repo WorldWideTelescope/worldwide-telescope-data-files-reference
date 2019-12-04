@@ -2,7 +2,8 @@
 
 ### Classifications
 
-Classification entries in WTML files can take one of the following values. The default classification is **Unfiltered**.
+Classification entries in WTML files can take one of the following values. The
+default classification is **Unfiltered**.
 
     Star
     Supernova
@@ -44,7 +45,12 @@ Classification entries in WTML files can take one of the following values. The d
 
 ### Constellations
 
-The following table lists the constellation codes and the center of each constellation. If a correct code is entered in a WTML file, such as **Constellation="CET"**, then there can be an improvement in the systems performance. If **Constellation** is left blank, or is wrong, then the **RA** and **Dec** entries are used. There are 89 entries in the table, as the discontiguous Serpens constellation is treated as two.
+The following table lists the constellation codes and the center of each
+constellation. If a correct code is entered in a WTML file, such as
+**Constellation="CET"**, then there can be an improvement in the systems
+performance. If **Constellation** is left blank, or is wrong, then the **RA**
+and **Dec** entries are used. There are 89 entries in the table, as the
+discontiguous Serpens constellation is treated as two.
 
 
 | Name | Code | RA (decimal hours) | RA (decimal degrees) | Dec (decimal degrees) |
@@ -141,7 +147,16 @@ The following table lists the constellation codes and the center of each constel
 
 ### Taxonomy
 
-The following table lists the taxonomy codes that can be used to classify images. WorldWide Telescope has adopted the image hierarchy taxonomy proposed by the International Virtual Observatory Alliance and the Virtual Astronomy Multimedia Project's (VAMP) Astronomy Visualization Metadata (AVM) Standard. Refer to the [International Virtual Observatory Alliance (IVOA)](http://virtualastronomy.org/AVM_DRAFTVersion1.1_02.pdf) and [Virtual Astronomy Multimedia Project (VAMP)](http://virtualastronomy.org/index.php) websites.As an example, a tour of the Sea of Tranquility on the Moon could be classified as _Planet>Feature>Surface>Impact._
+The following table lists the taxonomy codes that can be used to classify
+images. WorldWide Telescope has adopted the image hierarchy taxonomy proposed
+by the International Virtual Observatory Alliance and the Virtual Astronomy
+Multimedia Project's (VAMP) Astronomy Visualization Metadata (AVM) Standard.
+Refer to the
+[International Virtual Observatory Alliance (IVOA)](http://virtualastronomy.org/AVM_DRAFTVersion1.1_02.pdf)
+and
+[Virtual Astronomy Multimedia Project (VAMP)](http://virtualastronomy.org/index.php)
+websites.As an example, a tour of the Sea of Tranquility on the Moon could be
+classified as _Planet>Feature>Surface>Impact._
 
 | Code | Description |
 | :-- | :-- |
