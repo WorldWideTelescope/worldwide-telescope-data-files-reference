@@ -66,8 +66,8 @@
           FileType=".png"
           WidthFactor="2"
           Projection="Tangent">
-          <Credits>"NASA, ESA, and M. Livio (STScI)"</Credits>
-          <CreditsUrl>"http://hubblesite.org/newscenter/archive/releases/2008/37/"</CreditsUrl>
+          <Credits>NASA, ESA, and M. Livio (STScI)</Credits>
+          <CreditsUrl>http://hubblesite.org/newscenter/archive/releases/2008/37/</CreditsUrl>
         </ImageSet>
       </ForegroundImageSet>
     </Place>
@@ -108,8 +108,8 @@
           BottomsUp="False"
           OffsetX="0"
           OffsetY="0">
-          <Credits>"NASA, ESA, P. Kalas (UC Berkeley) et. al."</Credits>
-          <CreditsUrl>"http://hubblesite.org/newscenter/archive/releases/2008/39"</CreditsUrl>
+          <Credits>NASA, ESA, P. Kalas (UC Berkeley) et. al.</Credits>
+          <CreditsUrl>http://hubblesite.org/newscenter/archive/releases/2008/39</CreditsUrl>
         </ImageSet>
       </ForegroundImageSet>
     </Place>
