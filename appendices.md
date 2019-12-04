@@ -165,9 +165,6 @@ proposed by the International Virtual Observatory Alliance and the
 the Sea of Tranquility on the Moon could be classified as *Planet → Feature →
 Surface → Impact*.
 
-[Virtual Astronomy Multimedia Project]: http://virtualastronomy.org/
-[Astronomy Visualization Metadata]: https://www.virtualastronomy.org/avm_metadata.php
-
 | Code | Description |
 | :-- |
 | 1 | Planet |
@@ -397,3 +394,6 @@ Surface → Impact*.
 | 8.2.2 | Probe |
 | 8.2.3 | Lander |
 | 8.2.4 | Manned |
+
+[Virtual Astronomy Multimedia Project]: http://virtualastronomy.org/
+[Astronomy Visualization Metadata]: https://www.virtualastronomy.org/avm_metadata.php
