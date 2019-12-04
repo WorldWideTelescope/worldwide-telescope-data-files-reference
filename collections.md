@@ -522,11 +522,11 @@ sample signup file, based on the signup file for the WWT Data Community.
 | `<Folder` | One Folder entry. |
 | `    Name= "WWT Data Community"` | Name of the community. |
 | `    Group="Community"` | Set to **Community**. |
-| `    Thumbnail= "http://research.microsoft.com/..../wwtdatacommunitylogo.jpg"` | Full URL of the community thumbnail. |
-| `    Url= "http://research.microsoft.com/..../wwtdata_payload.wtml"/>` | Full URL of the payload file. |
+| `    Thumbnail= "http://example.com/communitylogo.jpg"` | Full URL of the community thumbnail. |
+| `    Url= "http://example.com/communitypayload.wtml"/>` | Full URL of the payload file. |
 
 A sample community signup file is also listed at
-[Sample_Signup.html](wtml/Sample_Signup.html).
+[sample-community-signup.tml](wtml/sample-community-signup.wtml)
 
 ### Step 5: Accessing the Community
 
@@ -565,5 +565,5 @@ the sample code.
 | [WTML Sample Study](wtml/sample_study.html) | Shows a collection of two studies. One image at the center of Pisces and one at the center of Aquarius. |
 | [WTML Sample Tour Collection](wtml/sample_tourcollection.html) | Shows a collection of two tours. |
 | [WTML Sample Panorama Survey](wtml/sample_panoramasurvey.html) | Shows a collection containing a single panorama. |
-| [WTML Join Our Community](wtml/Sample_Signup.html) | Shows a community signup file. |
+| [Sample Community Signup](wtml/sample-community-signup.html) | Shows a community signup file. |
 | [Sample Community Payload](wtml/sample-community-payload.wtml) | Shows a community payload file that can be used as a starting point for a new community. The community includes tours, studies, downloads and links. |
