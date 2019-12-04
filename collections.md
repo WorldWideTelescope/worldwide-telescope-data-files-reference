@@ -508,7 +508,7 @@ Typically payload files contain the following:
 * Links to Blog entries, forums, conversation threads, discussion boards
 
 A sample community payload file is
-[Community Payload.html](Wtml/Sample_CommunityPayload.html).
+[Community Payload.html](wtml/Sample_CommunityPayload.html).
 
 ### Step 4: Create a Signup File
 
@@ -526,7 +526,7 @@ sample signup file, based on the signup file for the WWT Data Community.
 | `    Url= "http://research.microsoft.com/..../wwtdata_payload.wtml"/>` | Full URL of the payload file. |
 
 A sample community signup file is also listed at
-[Sample_Signup.html](Wtml/Sample_Signup.html).
+[Sample_Signup.html](wtml/Sample_Signup.html).
 
 ### Step 5: Accessing the Community
 
@@ -561,9 +561,9 @@ the sample code.
 
 | Sample Name | Description |
 | :-- | :-- |
-| [WTML Blank Collection](Wtml/Sample_Blank Collection.html) | Shows the hierarchy of a collection, without any content. |
-| [WTML Sample Study](Wtml/sample_study.html) | Shows a collection of two studies. One image at the center of Pisces and one at the center of Aquarius. |
-| [WTML Sample Tour Collection](Wtml/sample_tourcollection.html) | Shows a collection of two tours. |
-| [WTML Sample Panorama Survey](Wtml/sample_panoramasurvey.html) | Shows a collection containing a single panorama. |
-| [WTML Join Our Community](Wtml/Sample_Signup.html) | Shows a community signup file. |
-| [WTML Community Payload](Wtml/Sample_CommunityPayload.html) | Shows a community payload file that can be used as a starting point for a new community. The community includes tours, studies, downloads and links. |
+| [WTML Blank Collection](wtml/Sample_Blank Collection.html) | Shows the hierarchy of a collection, without any content. |
+| [WTML Sample Study](wtml/sample_study.html) | Shows a collection of two studies. One image at the center of Pisces and one at the center of Aquarius. |
+| [WTML Sample Tour Collection](wtml/sample_tourcollection.html) | Shows a collection of two tours. |
+| [WTML Sample Panorama Survey](wtml/sample_panoramasurvey.html) | Shows a collection containing a single panorama. |
+| [WTML Join Our Community](wtml/Sample_Signup.html) | Shows a community signup file. |
+| [WTML Community Payload](wtml/Sample_CommunityPayload.html) | Shows a community payload file that can be used as a starting point for a new community. The community includes tours, studies, downloads and links. |
