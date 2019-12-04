@@ -1,10 +1,10 @@
 ---
-description: Information about WWT web links to particular views
+description: Information about WWT web links to particular views.
 ---
 
 {% hint style="danger" %}
-This information doesn’t really fit in well with the rest of this document.
-The documentation for the
+The information in this section doesn’t really fit in well with the rest of
+this document. The documentation for the
 [wwt-api-client Python module](https://wwt-api-client.readthedocs.io/) covers
 the same material and will be maintained going forward.
 {% endhint %}
