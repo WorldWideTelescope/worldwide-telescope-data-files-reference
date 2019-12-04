@@ -169,7 +169,7 @@ Surface → Impact*.
 [Astronomy Visualization Metadata]: https://www.virtualastronomy.org/avm_metadata.php
 
 | Code | Description |
-| :-- | :-- |
+| :-- |
 | 1 | Planet |
 | 1.1 | *Type* |
 | 1.1.1 | Terrestrial |
@@ -288,7 +288,7 @@ Surface → Impact*.
 | 4.1.5 | Jet |
 | 4.2 | *Appearance* |
 | 4.2.1 | Emission |
-| 4.2.1.1 | H II Region |
+| 4.2.1.1 | H-II Region |
 | 4.2.2 | Reflection |
 | 4.2.2.1 | Light Echo |
 | 4.2.3 | Dark |
@@ -323,7 +323,7 @@ Surface → Impact*.
 | 5.4.3 | Disk |
 | 5.4.4 | Halo |
 | 5.4.5 | Ring |
-| 5.4.6 | Central lack Hole |
+| 5.4.6 | Central Black Hole |
 | 5.4.7 | Spiral Arm |
 | 5.4.8 | Dust Lane |
 | 5.5 | *Grouping* |
