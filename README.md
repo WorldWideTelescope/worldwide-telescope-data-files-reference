@@ -1,4 +1,11 @@
-# WWT Data Files Reference: Source Code
+# This Repository Has Been Superseded
+
+Its content has been moved into the [Data Guide][dg].
+
+[dg]: https://github.com/WorldWideTelescope/worldwide-telescope-data-guide
+
+
+## WWT Data Files Reference: Source Code
 
 This repository contains the source code for the
 [AAS WorldWide Telescope Data Files Reference] documentation. The `master`
